@@ -15,6 +15,8 @@ use Illuminate\Database\Eloquent\Model;
  *     @SWG\Property(property="name", type="string"),
  *     @SWG\Property(property="arn", type="string"),
  *     @SWG\Property(property="access_key", type="string"),
+ *     @SWG\Property(property="size", type="integer"),
+ *     @SWG\Property(property="size_updated", type="string"),
  *     @SWG\Property(property="created_at", type="string"),
  *     @SWG\Property(property="updated_at", type="string"),
  * )

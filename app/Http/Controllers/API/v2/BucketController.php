@@ -19,7 +19,7 @@ class BucketController extends APIController
      *     summary="(DONE) Get bucket information. Requires JWT/Session Key",
      *     description="(DONE) Get bucket information. Requires JWT/Session Key",
      *     produces={"application/json"},
-     *     tags={"auth"},
+     *     tags={"bucket"},
      *     security={"session","jwt"},
      *     @SWG\Parameter(name="facility", in="path", type="string", description="Facility IATA ID"),
      *     @SWG\Response(
@@ -45,7 +45,7 @@ class BucketController extends APIController
      *         description="Return JSON Token.",
      *         @SWG\Schema(
      *             type="object",
-     *             @SWG\Property(property="bucket", type="object", ref="#/definitions/Bucket"),
+     *             @SWG\Property(property="bucket", ref="#/definitions/Bucket"),
      *        )
      *     )
      * )
@@ -72,7 +72,7 @@ class BucketController extends APIController
      *     summary="(DONE) Create bucket. Requires JWT/Session Key",
      *     description="(DONE) Create bucket. Requires JWT/Session Key",
      *     produces={"application/json"},
-     *     tags={"auth"},
+     *     tags={"bucket"},
      *     security={"session","jwt"},
      *     @SWG\Parameter(name="facility", in="path", type="string", description="Facility IATA ID"),
      *     @SWG\Response(
@@ -104,7 +104,7 @@ class BucketController extends APIController
      *         description="Return JSON Token.",
      *         @SWG\Schema(
      *             type="object",
-     *             @SWG\Property(property="bucket", type="object", ref="#/definitions/Bucket"),
+     *             @SWG\Property(property="bucket", ref="#/definitions/Bucket"),
      *        )
      *     )
      * )

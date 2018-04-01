@@ -31,6 +31,10 @@ RUN	addgroup -S application && adduser -SG application application && \
 		php7 \
 		nginx \
 		supervisor \
+		groff \
+		less \
+		python \
+		py-pip \
 		openssh-client && \
 	sed -i "s|;*daemonize\s*=\s*yes|daemonize = no|g" /etc/php7/php-fpm.conf && \
 	sed -i "s|;*listen\s*=\s*127.0.0.1:9000|listen = 9000|g" /etc/php7/php-fpm.d/www.conf && \
@@ -41,6 +45,8 @@ RUN	addgroup -S application && adduser -SG application application && \
     sed -i "s|;*max_file_uploads =.*|max_file_uploads = ${PHP_MAX_FILE_UPLOAD}|i" /etc/php7/php.ini && \
     sed -i "s|;*post_max_size =.*|post_max_size = ${PHP_MAX_POST}|i" /etc/php7/php.ini && \
     sed -i "s|;*cgi.fix_pathinfo=.*|cgi.fix_pathinfo= 0|i" /etc/php7/php.ini && \
+    pip install awscli && \
+    apk --purge -v del py-pip && \
     mkdir /etc/supervisor.d && \
     mkdir /var/run/nginx && \
 	mkdir /www && \
